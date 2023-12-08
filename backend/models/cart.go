@@ -16,7 +16,7 @@ type CartProduct struct {
 }
 
 type CartCreate struct {
-	Phone              int                 `json:"phone"`
+	Phone              string              `json:"phone"`
 	CartCreateProducts []CartCreateProduct `json:"products"`
 }
 
