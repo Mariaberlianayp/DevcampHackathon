@@ -38,6 +38,7 @@ func InitializeRouter() (router *gin.Engine) {
 		order := apiRoute.Group("/order")
 		{
 			order.POST("/create", api.CreateOrder)
+			order.POST("/payment", api.PaymentOrder)
 		}
 	}
 

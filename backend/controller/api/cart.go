@@ -30,7 +30,6 @@ func CreateCart(c *gin.Context) {
 			c.JSON(http.StatusNotFound, models.Response{Error: result.Error})
 			return
 		}
-
 		cartProduct := models.CartProduct{
 			Product:  product,
 			Quantity: cartCreateProduct.Quantity,
