@@ -169,7 +169,7 @@ struct SplitBillView: View {
                     VStack{
                         Text("Total Tagihan")
                             .fontWeight(.semibold)
-                        Text("Rp. \(totalBarang)")
+                        Text("Rp. \(biayaPerOrang)")
                             .font(.title3)
                             .fontWeight(.bold)
                             .padding(.leading, 20.0)

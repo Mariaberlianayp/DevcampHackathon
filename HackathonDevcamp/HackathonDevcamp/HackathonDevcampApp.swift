@@ -13,7 +13,7 @@ struct HackathonDevcampApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ReviewPaymentView()
+            ContentView()
         }
     }
 }

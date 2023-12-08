@@ -15,17 +15,6 @@ struct ReviewPaymentView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                     VStack{
-                        HStack{
-                            NavigationLink(destination:CartView())
-                            {
-                                Image(systemName: "arrow.backward")
-                                    .foregroundColor(.black)
-                            }
-                            Spacer()
-                        }.padding(.leading, 15.0)
-                        Spacer()
-                    }.padding(.top, 60.0)
-                    VStack{
                         Spacer()
                         NavigationLink(destination:PinInputView())
                         {
