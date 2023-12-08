@@ -33,14 +33,14 @@ func CreateUser(c *gin.Context) {
 func GetUser(c *gin.Context) {
 	db := pkg.Database
 
-	phone := c.Query("phone")
+	phone := c.Param("phone")
 	if phone == "" {
 		c.JSON(http.StatusBadRequest, models.Response{Error: phoneNumberNotEmptyMessasge})
 		return
 	}
 
 	var user models.User
-	if result := db.First(&user, " = ?", phone); result.Error != nil {
+	if result := db.First(&user, "phone = ?", phone); result.Error != nil {
 		c.JSON(http.StatusNotFound, models.Response{Error: userNotFoundMessage})
 		return
 	}
