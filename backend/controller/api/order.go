@@ -69,5 +69,44 @@ func CreateOrder(c *gin.Context) {
 		return
 	}
 
+	db.Delete(&cart)
+
 	c.JSON(http.StatusOK, models.Response{Data: order})
+}
+
+func PaymentOrder(c *gin.Context) {
+	db := pkg.Database
+	var input models.PaymentUserForm
+
+	if err := c.ShouldBindJSON(&input); err != nil {
+		c.JSON(http.StatusBadRequest, models.Response{Error: err.Error()})
+		return
+	}
+
+	var payment models.Payment
+	if result := db.Preload("User").Where("order_id = ? AND user_id = ? ", input.OrderID, input.UserID).Find(&payment); result.Error != nil {
+		c.JSON(http.StatusNotFound, models.Response{Error: result.Error})
+		return
+	}
+
+	db.Model(&payment).Update("is_paid", true)
+
+	var order models.Order
+	if temp := db.Preload("User").Preload("OrderProducts.Product").Preload("Payments.User").First(&order, "id = ?", input.OrderID); temp.Error != nil {
+		c.JSON(http.StatusNotFound, models.Response{Error: temp.Error})
+		return
+	}
+
+	boolAllPaid := true
+	for _, payment := range order.Payments {
+		if payment.IsPaid == false {
+			boolAllPaid = false
+		}
+	}
+
+	if boolAllPaid == true {
+		db.Model(&order).Update("status", "konfirmasi penjual")
+	}
+
+	c.JSON(http.StatusAccepted, models.Response{Data: order})
 }

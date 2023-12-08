@@ -30,3 +30,8 @@ type OrderCreate struct {
 	CartID         uint     `json:"cart_id"`
 	InvolvedPhones []string `json:"involved_phones"`
 }
+
+type PaymentUserForm struct {
+	UserID  uint `json:"user_id"`
+	OrderID uint `json:"order_id"`
+}

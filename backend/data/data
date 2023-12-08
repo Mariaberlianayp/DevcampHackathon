@@ -1,0 +1,33 @@
+User
+[
+    {
+        "name": "Erwin",
+        "phone" : "081234567890",
+        "pin" : "000000"
+    },
+    {
+        "name" : "Kevin",
+        "phone": "081234567891",
+        "pin" : "111111"
+    },
+    {
+        "name" : "Maria",
+        "phone": "081234567892",
+        "pin"  : "222222"
+    }
+]
+
+
+Product
+[
+    {
+        "name": "Figure Naruto",
+        "image_url" : "https://postimg.cc/vcMFpm84",
+        "price" : 30000
+    },
+    {
+        "name" : "Lego Roket",
+        "image_url": "https://postimg.cc/MMj66ZFh/296afa46",
+        "price" : 60000
+    }
+]
