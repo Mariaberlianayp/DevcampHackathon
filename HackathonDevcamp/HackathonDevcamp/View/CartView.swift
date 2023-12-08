@@ -19,13 +19,13 @@ struct CartView: View {
                     Spacer()
                     HStack {
                         Spacer()
-                        NavigationLink(destination: CartView()) {
+                        NavigationLink(destination: ChoosePaymentView()) {
                             
                             Text("Beli(1)")
                                 .font(.custom("OpenSauceOne-Bold", size: 16))
                                 .frame(width: 105.0, height: 40.0)
                         }
-                        .background(.green)
+                        .background(Color("Hijau1"))
                         .foregroundColor(.white)
                         .frame(width: 105.0, height: 40.0)
                         .cornerRadius(10)
@@ -36,7 +36,7 @@ struct CartView: View {
                 
             }
             
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 #Preview {
