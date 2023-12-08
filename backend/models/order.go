@@ -7,6 +7,7 @@ type Order struct {
 	OrderProducts []OrderProduct `json:"products" gorm:"foreignKey:OrderID"`
 	Payments      []Payment      `json:"payments" gorm:"foreignKey:OrderID"`
 	Status        string         `json:"status" gorm:"not null"`
+	TotalAmount   int            `json:"total_amount" gorm:"-"`
 }
 
 type OrderProduct struct {
@@ -32,6 +33,6 @@ type OrderCreate struct {
 }
 
 type PaymentUserForm struct {
-	UserID  uint `json:"user_id"`
-	OrderID uint `json:"order_id"`
+	Phone   string `json:"phone"`
+	OrderID uint   `json:"order_id"`
 }

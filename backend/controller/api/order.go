@@ -83,8 +83,14 @@ func PaymentOrder(c *gin.Context) {
 		return
 	}
 
+	var user models.User
+	if result := db.First(&user, "phone = ?", input.Phone); result.Error != nil {
+		c.JSON(http.StatusNotFound, models.Response{Error: result.Error})
+		return
+	}
+
 	var payment models.Payment
-	if result := db.Preload("User").Where("order_id = ? AND user_id = ? ", input.OrderID, input.UserID).Find(&payment); result.Error != nil {
+	if result := db.Preload("User").Where("order_id = ? AND user_id = ? ", input.OrderID, user.ID).Find(&payment); result.Error != nil {
 		c.JSON(http.StatusNotFound, models.Response{Error: result.Error})
 		return
 	}
@@ -99,14 +105,50 @@ func PaymentOrder(c *gin.Context) {
 
 	boolAllPaid := true
 	for _, payment := range order.Payments {
-		if payment.IsPaid == false {
+		if !payment.IsPaid {
 			boolAllPaid = false
 		}
 	}
 
-	if boolAllPaid == true {
-		db.Model(&order).Update("status", "konfirmasi penjual")
+	if boolAllPaid {
+		db.Model(&order).Update("status", "Konfirmasi Penjual")
 	}
 
+	totalAmount := 0
+	for _, orderProduct := range order.OrderProducts {
+		totalAmount += orderProduct.Product.Price * orderProduct.Quantity
+	}
+	order.TotalAmount = totalAmount
+
 	c.JSON(http.StatusAccepted, models.Response{Data: order})
+}
+
+func GetOrder(c *gin.Context) {
+	db := pkg.Database
+
+	var user models.User
+	if result := db.First(&user, "phone = ?", c.Param("phone")); result.Error != nil {
+		c.JSON(http.StatusNotFound, models.Response{Error: result.Error})
+		return
+	}
+
+	var payment models.Payment
+	if result := db.Where("user_id = ? ", user.ID).Find(&payment); result.Error != nil {
+		c.JSON(http.StatusNotFound, models.Response{Error: result.Error})
+		return
+	}
+
+	var order models.Order
+	if result := db.Preload("User").Preload("OrderProducts.Product").Preload("Payments.User").First(&order, "id = ?", payment.OrderID); result.Error != nil {
+		c.JSON(http.StatusNotFound, models.Response{Error: result.Error})
+		return
+	}
+
+	totalAmount := 0
+	for _, orderProduct := range order.OrderProducts {
+		totalAmount += orderProduct.Product.Price * orderProduct.Quantity
+	}
+	order.TotalAmount = totalAmount
+
+	c.JSON(http.StatusOK, models.Response{Data: order})
 }

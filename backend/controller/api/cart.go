@@ -66,8 +66,8 @@ func GetCart(c *gin.Context) {
 	}
 
 	totalAmount := 0
-	for _, cartProducts := range cart.CartProducts {
-		totalAmount += cartProducts.Product.Price * cartProducts.Quantity
+	for _, cartProduct := range cart.CartProducts {
+		totalAmount += cartProduct.Product.Price * cartProduct.Quantity
 	}
 	cart.TotalAmount = totalAmount
 
