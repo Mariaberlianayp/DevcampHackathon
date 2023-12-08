@@ -36,10 +36,10 @@ struct PlusButton: View {
     }
 }
 struct APIResponse: Codable {
-    let data: UserData?
+    let data: FriendsData?
 }
 
-struct UserData: Codable {
+struct FriendsData: Codable {
     let name: String
     let phone: String
     // Add other properties as needed
@@ -48,9 +48,12 @@ struct UserData: Codable {
 struct SplitBillView: View {
     @State private var nomorUser: String = ""
     @State private var namaUser: String = ""
+    @State private var totalBarang: Int = 592700
+    @State private var biayaPerOrang: Int = 592700
     @State private var isEditing: Bool = false
+    @State private var isError: Bool = false
     @State private var friends: [(name: String, phoneNumber: String)] = []
-    
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         NavigationView{
             VStack{
@@ -66,7 +69,7 @@ struct SplitBillView: View {
                             .foregroundColor(Color("Dark2"))
                             .font(.system(size: 20))
                         
-                    }.padding(.vertical, 20.0)
+                    }.padding(.bottom, 20.0)
                     ZStack{
                         
                         TextField("", text: $nomorUser, onEditingChanged: { editing in
@@ -140,9 +143,61 @@ struct SplitBillView: View {
                 }
                 
                 Spacer()
+                VStack{
+                    VStack(alignment: .leading){
+                        Text("Ringkasan Patungan")
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                    }.padding(.leading, -180.0)
+                    HStack{
+                        Text("Total Pembelian")
+                        Spacer()
+                        Text("Rp. \(totalBarang)")
+                    }
+                    HStack{
+                        Text("Biaya per orang")
+                        Spacer()
+                        Text("Rp. \(biayaPerOrang)")
+                    }
+                }.padding()
+                    .background(RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.white)
+                    .shadow(color: Color.gray.opacity(0.5), radius: 5, x: 0, y: 2)
+                    .frame(width: 500.0, height: 100.0)
+                )
+                HStack{
+                    VStack{
+                        Text("Total Tagihan")
+                            .fontWeight(.semibold)
+                        Text("Rp. \(biayaPerOrang)")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .padding(.leading, 20.0)
+                        
+                    }.padding(.leading, -18.0)
+                    Spacer()
+                    NavigationLink(destination: PinInputView()) {
+                        HStack{
+                            Image(systemName: "checkmark.shield")
+                                .padding(.leading, -5.0)
+                            Text("Bayar")
+                                .font(.custom("OpenSauceOne-Bold", size: 16))
+                        }.frame(width: 105.0, height: 40.0)
+                    }
+                    .background(Color("Hijau1"))
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    
+                }
+                .padding(.top, 20.0)
             }
             .padding()
+            
         }.navigationBarBackButtonHidden(true)
+            .onReceive(timer) { _ in
+                biayaPerOrang = totalBarang/(friends.count+1)
+            }
+        
     }
     func fetchUserData() {
         guard let url = URL(string: "http://localhost:8080/api/user/\(nomorUser)") else {
