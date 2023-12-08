@@ -18,6 +18,6 @@ func InitializeSqlite(dbConfig config.DatabaseConfig) error {
 		return err
 	}
 
-	Database.AutoMigrate(models.Example{}, models.Cart{}, models.Order{}, models.Product{}, models.User{})
+	Database.AutoMigrate(models.Example{}, models.Cart{}, models.CartProduct{}, models.Order{}, models.OrderProduct{}, models.Payment{}, models.Product{}, models.User{})
 	return nil
 }

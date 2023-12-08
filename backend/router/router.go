@@ -27,6 +27,20 @@ func InitializeRouter() (router *gin.Engine) {
 			otherGroup.GET("/:phone", api.GetUser)
 		}
 	}
+	{
+		cart := apiRoute.Group("/cart")
+		{
+			cart.POST("/create", api.CreateCart)
+			cart.GET("/:phone", api.GetCart)
+		}
+	}
+	{
+		order := apiRoute.Group("/order")
+		{
+			order.POST("/create", api.CreateOrder)
+			order.POST("/payment", api.PaymentOrder)
+		}
+	}
 
 	return router
 }

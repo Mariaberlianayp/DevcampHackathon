@@ -5,6 +5,7 @@ type Cart struct {
 	UserID       uint          `json:"-"`
 	User         User          `json:"user" gorm:"foreignKey:UserID"`
 	CartProducts []CartProduct `json:"products" gorm:"foreignKey:CartID"`
+	TotalAmount  int           `json:"total_amount" gorm:"-"`
 }
 
 type CartProduct struct {
@@ -16,7 +17,7 @@ type CartProduct struct {
 }
 
 type CartCreate struct {
-	Phone              int                 `json:"phone"`
+	Phone              string              `json:"phone"`
 	CartCreateProducts []CartCreateProduct `json:"products"`
 }
 
