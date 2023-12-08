@@ -17,7 +17,13 @@ func InitializeRouter() (router *gin.Engine) {
 	{
 		example := apiRoute.Group("/product")
 		{
-			example.POST("/product", api.CreateProduct)
+			example.POST("/", api.CreateProduct)
+		}
+	}
+	{
+		otherGroup := apiRoute.Group("/user")
+		{
+			otherGroup.GET("/:phone", api.GetUser)
 		}
 	}
 
