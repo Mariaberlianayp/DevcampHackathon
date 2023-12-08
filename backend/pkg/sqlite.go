@@ -2,7 +2,6 @@ package pkg
 
 import (
 	"boilerplate/config"
-	"boilerplate/models"
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
@@ -18,6 +17,6 @@ func InitializeSqlite(dbConfig config.DatabaseConfig) error {
 		return err
 	}
 
-	Database.AutoMigrate(models.Example{})
+	// Database.AutoMigrate(models.Example{})
 	return nil
 }
