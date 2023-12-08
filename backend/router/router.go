@@ -33,6 +33,12 @@ func InitializeRouter() (router *gin.Engine) {
 			cart.POST("/create", api.CreateCart)
 		}
 	}
+	{
+		order := apiRoute.Group("/order")
+		{
+			order.POST("/create", api.CreateOrder)
+		}
+	}
 
 	return router
 }
