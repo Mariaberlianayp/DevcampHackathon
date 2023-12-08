@@ -23,6 +23,7 @@ func InitializeRouter() (router *gin.Engine) {
 	{
 		otherGroup := apiRoute.Group("/user")
 		{
+			otherGroup.POST("/create", api.CreateUser)
 			otherGroup.GET("/:phone", api.GetUser)
 		}
 	}
