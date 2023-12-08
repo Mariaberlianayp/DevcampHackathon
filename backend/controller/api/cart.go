@@ -24,20 +24,29 @@ func CreateCart(c *gin.Context) {
 	}
 
 	cartProducts := []models.CartProduct{}
-	for _, product := range input.CartCreateProducts {
+	for _, cartCreateProduct := range input.CartCreateProducts {
+		var product models.Product
+		if result := db.First(&product, "id = ?", cartCreateProduct.ProductID); result.Error != nil {
+			c.JSON(http.StatusNotFound, models.Response{Error: result.Error})
+			return
+		}
+
 		cartProduct := models.CartProduct{
-			ProductID: product.ProductID,
-			Quantity:  product.Quantity,
+			Product:  product,
+			Quantity: cartCreateProduct.Quantity,
 		}
 		cartProducts = append(cartProducts, cartProduct)
 	}
 
 	cart := models.Cart{
-		UserID:       user.ID,
+		User:         user,
 		CartProducts: cartProducts,
 	}
 
-	db.Create(&cart)
+	if result := db.Create(&cart); result.Error != nil {
+		c.JSON(http.StatusNotFound, models.Response{Error: result.Error})
+		return
+	}
 
 	c.JSON(http.StatusOK, models.Response{Data: cart})
 }
