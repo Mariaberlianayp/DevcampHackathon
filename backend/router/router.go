@@ -39,6 +39,7 @@ func InitializeRouter() (router *gin.Engine) {
 		{
 			order.POST("/create", api.CreateOrder)
 			order.POST("/payment", api.PaymentOrder)
+			order.GET("/:phone", api.GetOrder)
 		}
 	}
 
