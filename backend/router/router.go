@@ -31,6 +31,7 @@ func InitializeRouter() (router *gin.Engine) {
 		cart := apiRoute.Group("/cart")
 		{
 			cart.POST("/create", api.CreateCart)
+			cart.GET("/:phone", api.GetCart)
 		}
 	}
 	{

@@ -50,3 +50,27 @@ func CreateCart(c *gin.Context) {
 
 	c.JSON(http.StatusOK, models.Response{Data: cart})
 }
+
+func GetCart(c *gin.Context) {
+	db := pkg.Database
+
+	var user models.User
+	if result := db.First(&user, "phone = ?", c.Param("phone")); result.Error != nil {
+		c.JSON(http.StatusNotFound, models.Response{Error: result.Error})
+		return
+	}
+
+	var cart models.Cart
+	if result := db.Preload("User").Preload("CartProducts.Product").First(&cart, "user_id = ?", user.ID); result.Error != nil {
+		c.JSON(http.StatusNotFound, models.Response{Error: result.Error})
+		return
+	}
+
+	totalAmount := 0
+	for _, cartProducts := range cart.CartProducts {
+		totalAmount += cartProducts.Product.Price * cartProducts.Quantity
+	}
+	cart.TotalAmount = totalAmount
+
+	c.JSON(http.StatusOK, models.Response{Data: cart})
+}
