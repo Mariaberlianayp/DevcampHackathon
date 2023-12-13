@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BDF2E9B2B22D0DA00216CA8 /* HackathonDevcampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2E9A2B22D0DA00216CA8 /* HackathonDevcampApp.swift */; };
+		4BDF2E9D2B22D0DA00216CA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2E9C2B22D0DA00216CA8 /* ContentView.swift */; };
+		4BDF2E9F2B22D0DB00216CA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF2E9E2B22D0DB00216CA8 /* Assets.xcassets */; };
+		4BDF2EA22B22D0DB00216CA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF2EA12B22D0DB00216CA8 /* Preview Assets.xcassets */; };
+		4BDF2EAC2B22D0DB00216CA8 /* HackathonDevcampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EAB2B22D0DB00216CA8 /* HackathonDevcampTests.swift */; };
+		4BDF2EB62B22D0DB00216CA8 /* HackathonDevcampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EB52B22D0DB00216CA8 /* HackathonDevcampUITests.swift */; };
+		4BDF2EB82B22D0DB00216CA8 /* HackathonDevcampUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EB72B22D0DB00216CA8 /* HackathonDevcampUITestsLaunchTests.swift */; };
+		4BDF2EC92B22D1BD00216CA8 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EC82B22D1BD00216CA8 /* CartView.swift */; };
+		4BDF2ECD2B22D30100216CA8 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2ECC2B22D30100216CA8 /* CheckoutView.swift */; };
+		4BDF2ED12B22D57800216CA8 /* OpenSauceOne-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF2ED02B22D57800216CA8 /* OpenSauceOne-Bold.ttf */; };
+		4BDF2ED22B22D57800216CA8 /* OpenSauceOne-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF2ED02B22D57800216CA8 /* OpenSauceOne-Bold.ttf */; };
+		4BDF2ED32B22D57800216CA8 /* OpenSauceOne-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF2ED02B22D57800216CA8 /* OpenSauceOne-Bold.ttf */; };
+		4BDF2ED52B22D58500216CA8 /* OpenSauceOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF2ED42B22D58500216CA8 /* OpenSauceOne-Regular.ttf */; };
+		4BDF2ED62B22D58500216CA8 /* OpenSauceOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF2ED42B22D58500216CA8 /* OpenSauceOne-Regular.ttf */; };
+		4BDF2ED72B22D58500216CA8 /* OpenSauceOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF2ED42B22D58500216CA8 /* OpenSauceOne-Regular.ttf */; };
+		4BDF2ED92B22D59500216CA8 /* OpenSauceOne-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF2ED82B22D59500216CA8 /* OpenSauceOne-SemiBold.ttf */; };
+		4BDF2EDA2B22D59500216CA8 /* OpenSauceOne-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF2ED82B22D59500216CA8 /* OpenSauceOne-SemiBold.ttf */; };
+		4BDF2EDB2B22D59500216CA8 /* OpenSauceOne-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF2ED82B22D59500216CA8 /* OpenSauceOne-SemiBold.ttf */; };
+		4BDF2EDE2B22E4D800216CA8 /* SplitBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EDD2B22E4D800216CA8 /* SplitBillView.swift */; };
+		4BDF2EDF2B22E4D800216CA8 /* SplitBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EDD2B22E4D800216CA8 /* SplitBillView.swift */; };
+		4BDF2EE02B22E4D800216CA8 /* SplitBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EDD2B22E4D800216CA8 /* SplitBillView.swift */; };
+		4BDF2EE22B22E52A00216CA8 /* ChoosePaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EE12B22E52A00216CA8 /* ChoosePaymentView.swift */; };
+		4BDF2EE32B22E52A00216CA8 /* ChoosePaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EE12B22E52A00216CA8 /* ChoosePaymentView.swift */; };
+		4BDF2EE42B22E52A00216CA8 /* ChoosePaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EE12B22E52A00216CA8 /* ChoosePaymentView.swift */; };
+		4BDF2EF02B23654400216CA8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EEF2B23654400216CA8 /* UserModel.swift */; };
+		4BDF2EF12B23654400216CA8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EEF2B23654400216CA8 /* UserModel.swift */; };
+		4BDF2EF22B23654400216CA8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EEF2B23654400216CA8 /* UserModel.swift */; };
+		4BDF2EF42B23655600216CA8 /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EF32B23655600216CA8 /* GetUserData.swift */; };
+		4BDF2EF52B23655600216CA8 /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EF32B23655600216CA8 /* GetUserData.swift */; };
+		4BDF2EF62B23655600216CA8 /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EF32B23655600216CA8 /* GetUserData.swift */; };
+		4BDF2EF82B23656500216CA8 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EF72B23656500216CA8 /* ButtonComponent.swift */; };
+		4BDF2EF92B23656500216CA8 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EF72B23656500216CA8 /* ButtonComponent.swift */; };
+		4BDF2EFA2B23656500216CA8 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EF72B23656500216CA8 /* ButtonComponent.swift */; };
+		4BDF2EFC2B2365D200216CA8 /* PinInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EFB2B2365D200216CA8 /* PinInputView.swift */; };
+		4BDF2EFD2B2365D200216CA8 /* PinInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EFB2B2365D200216CA8 /* PinInputView.swift */; };
+		4BDF2EFE2B2365D200216CA8 /* PinInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EFB2B2365D200216CA8 /* PinInputView.swift */; };
+		4BDF2F002B23698D00216CA8 /* AfterPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EFF2B23698D00216CA8 /* AfterPaymentView.swift */; };
+		4BDF2F012B23698D00216CA8 /* AfterPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EFF2B23698D00216CA8 /* AfterPaymentView.swift */; };
+		4BDF2F022B23698D00216CA8 /* AfterPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2EFF2B23698D00216CA8 /* AfterPaymentView.swift */; };
+		4BDF2F042B2375EA00216CA8 /* MenungguPembayaranView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2F032B2375EA00216CA8 /* MenungguPembayaranView.swift */; };
+		4BDF2F062B23774F00216CA8 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2F052B23774F00216CA8 /* TransactionDetailView.swift */; };
+		4BDF2F082B237A1E00216CA8 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2F072B237A1E00216CA8 /* NotificationController.swift */; };
+		4BDF2F0A2B237B1900216CA8 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2F092B237B1900216CA8 /* NotificationView.swift */; };
+		4BDF2F0C2B23881600216CA8 /* ReviewPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF2F0B2B23881600216CA8 /* ReviewPaymentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BDF2EA82B22D0DB00216CA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BDF2E8F2B22D0D900216CA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BDF2E962B22D0D900216CA8;
+			remoteInfo = HackathonDevcamp;
+		};
+		4BDF2EB22B22D0DB00216CA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BDF2E8F2B22D0D900216CA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BDF2E962B22D0D900216CA8;
+			remoteInfo = HackathonDevcamp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4BDF2E972B22D0D900216CA8 /* HackathonDevcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonDevcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BDF2E9A2B22D0DA00216CA8 /* HackathonDevcampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonDevcampApp.swift; sourceTree = "<group>"; };
+		4BDF2E9C2B22D0DA00216CA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4BDF2E9E2B22D0DB00216CA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4BDF2EA12B22D0DB00216CA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4BDF2EA72B22D0DB00216CA8 /* HackathonDevcampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonDevcampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BDF2EAB2B22D0DB00216CA8 /* HackathonDevcampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonDevcampTests.swift; sourceTree = "<group>"; };
+		4BDF2EB12B22D0DB00216CA8 /* HackathonDevcampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonDevcampUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BDF2EB52B22D0DB00216CA8 /* HackathonDevcampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonDevcampUITests.swift; sourceTree = "<group>"; };
+		4BDF2EB72B22D0DB00216CA8 /* HackathonDevcampUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonDevcampUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4BDF2EC82B22D1BD00216CA8 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		4BDF2ECC2B22D30100216CA8 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		4BDF2ED02B22D57800216CA8 /* OpenSauceOne-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSauceOne-Bold.ttf"; sourceTree = "<group>"; };
+		4BDF2ED42B22D58500216CA8 /* OpenSauceOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSauceOne-Regular.ttf"; sourceTree = "<group>"; };
+		4BDF2ED82B22D59500216CA8 /* OpenSauceOne-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSauceOne-SemiBold.ttf"; sourceTree = "<group>"; };
+		4BDF2EDC2B22D5B600216CA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4BDF2EDD2B22E4D800216CA8 /* SplitBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitBillView.swift; sourceTree = "<group>"; };
+		4BDF2EE12B22E52A00216CA8 /* ChoosePaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePaymentView.swift; sourceTree = "<group>"; };
+		4BDF2EEF2B23654400216CA8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4BDF2EF32B23655600216CA8 /* GetUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserData.swift; sourceTree = "<group>"; };
+		4BDF2EF72B23656500216CA8 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		4BDF2EFB2B2365D200216CA8 /* PinInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinInputView.swift; sourceTree = "<group>"; };
+		4BDF2EFF2B23698D00216CA8 /* AfterPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterPaymentView.swift; sourceTree = "<group>"; };
+		4BDF2F032B2375EA00216CA8 /* MenungguPembayaranView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenungguPembayaranView.swift; sourceTree = "<group>"; };
+		4BDF2F052B23774F00216CA8 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
+		4BDF2F072B237A1E00216CA8 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		4BDF2F092B237B1900216CA8 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		4BDF2F0B2B23881600216CA8 /* ReviewPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPaymentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BDF2E942B22D0D900216CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BDF2EA42B22D0DB00216CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BDF2EAE2B22D0DB00216CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BDF2E8E2B22D0D900216CA8 = {
+			isa = PBXGroup;
+			children = (
+				4BDF2E992B22D0DA00216CA8 /* HackathonDevcamp */,
+				4BDF2EAA2B22D0DB00216CA8 /* HackathonDevcampTests */,
+				4BDF2EB42B22D0DB00216CA8 /* HackathonDevcampUITests */,
+				4BDF2E982B22D0D900216CA8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4BDF2E982B22D0D900216CA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF2E972B22D0D900216CA8 /* HackathonDevcamp.app */,
+				4BDF2EA72B22D0DB00216CA8 /* HackathonDevcampTests.xctest */,
+				4BDF2EB12B22D0DB00216CA8 /* HackathonDevcampUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BDF2E992B22D0DA00216CA8 /* HackathonDevcamp */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF2ECE2B22D55900216CA8 /* Assets */,
+				4BDF2EC72B22D18700216CA8 /* View */,
+				4BDF2EC62B22D18000216CA8 /* ViewModel */,
+				4BDF2EC52B22D17B00216CA8 /* Model */,
+				4BDF2EC42B22D16C00216CA8 /* ReusableComponent */,
+				4BDF2E9E2B22D0DB00216CA8 /* Assets.xcassets */,
+				4BDF2EDC2B22D5B600216CA8 /* Info.plist */,
+				4BDF2E9A2B22D0DA00216CA8 /* HackathonDevcampApp.swift */,
+				4BDF2EA02B22D0DB00216CA8 /* Preview Content */,
+			);
+			path = HackathonDevcamp;
+			sourceTree = "<group>";
+		};
+		4BDF2EA02B22D0DB00216CA8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF2EA12B22D0DB00216CA8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4BDF2EAA2B22D0DB00216CA8 /* HackathonDevcampTests */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF2EAB2B22D0DB00216CA8 /* HackathonDevcampTests.swift */,
+			);
+			path = HackathonDevcampTests;
+			sourceTree = "<group>";
+		};
+		4BDF2EB42B22D0DB00216CA8 /* HackathonDevcampUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF2EB52B22D0DB00216CA8 /* HackathonDevcampUITests.swift */,
+				4BDF2EB72B22D0DB00216CA8 /* HackathonDevcampUITestsLaunchTests.swift */,
+			);
+			path = HackathonDevcampUITests;
+			sourceTree = "<group>";
+		};
+		4BDF2EC42B22D16C00216CA8 /* ReusableComponent */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF2EF72B23656500216CA8 /* ButtonComponent.swift */,
+			);
+			path = ReusableComponent;
+			sourceTree = "<group>";
+		};
+		4BDF2EC52B22D17B00216CA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF2EEF2B23654400216CA8 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4BDF2EC62B22D18000216CA8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF2EF32B23655600216CA8 /* GetUserData.swift */,
+				4BDF2F072B237A1E00216CA8 /* NotificationController.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4BDF2EC72B22D18700216CA8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF2E9C2B22D0DA00216CA8 /* ContentView.swift */,
+				4BDF2EC82B22D1BD00216CA8 /* CartView.swift */,
+				4BDF2ECC2B22D30100216CA8 /* CheckoutView.swift */,
+				4BDF2EDD2B22E4D800216CA8 /* SplitBillView.swift */,
+				4BDF2EE12B22E52A00216CA8 /* ChoosePaymentView.swift */,
+				4BDF2EFB2B2365D200216CA8 /* PinInputView.swift */,
+				4BDF2EFF2B23698D00216CA8 /* AfterPaymentView.swift */,
+				4BDF2F032B2375EA00216CA8 /* MenungguPembayaranView.swift */,
+				4BDF2F052B23774F00216CA8 /* TransactionDetailView.swift */,
+				4BDF2F092B237B1900216CA8 /* NotificationView.swift */,
+				4BDF2F0B2B23881600216CA8 /* ReviewPaymentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BDF2ECE2B22D55900216CA8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF2ECF2B22D56700216CA8 /* Font */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		4BDF2ECF2B22D56700216CA8 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF2ED82B22D59500216CA8 /* OpenSauceOne-SemiBold.ttf */,
+				4BDF2ED42B22D58500216CA8 /* OpenSauceOne-Regular.ttf */,
+				4BDF2ED02B22D57800216CA8 /* OpenSauceOne-Bold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BDF2E962B22D0D900216CA8 /* HackathonDevcamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BDF2EBB2B22D0DB00216CA8 /* Build configuration list for PBXNativeTarget "HackathonDevcamp" */;
+			buildPhases = (
+				4BDF2E932B22D0D900216CA8 /* Sources */,
+				4BDF2E942B22D0D900216CA8 /* Frameworks */,
+				4BDF2E952B22D0D900216CA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackathonDevcamp;
+			productName = HackathonDevcamp;
+			productReference = 4BDF2E972B22D0D900216CA8 /* HackathonDevcamp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4BDF2EA62B22D0DB00216CA8 /* HackathonDevcampTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BDF2EBE2B22D0DB00216CA8 /* Build configuration list for PBXNativeTarget "HackathonDevcampTests" */;
+			buildPhases = (
+				4BDF2EA32B22D0DB00216CA8 /* Sources */,
+				4BDF2EA42B22D0DB00216CA8 /* Frameworks */,
+				4BDF2EA52B22D0DB00216CA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BDF2EA92B22D0DB00216CA8 /* PBXTargetDependency */,
+			);
+			name = HackathonDevcampTests;
+			productName = HackathonDevcampTests;
+			productReference = 4BDF2EA72B22D0DB00216CA8 /* HackathonDevcampTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4BDF2EB02B22D0DB00216CA8 /* HackathonDevcampUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BDF2EC12B22D0DB00216CA8 /* Build configuration list for PBXNativeTarget "HackathonDevcampUITests" */;
+			buildPhases = (
+				4BDF2EAD2B22D0DB00216CA8 /* Sources */,
+				4BDF2EAE2B22D0DB00216CA8 /* Frameworks */,
+				4BDF2EAF2B22D0DB00216CA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BDF2EB32B22D0DB00216CA8 /* PBXTargetDependency */,
+			);
+			name = HackathonDevcampUITests;
+			productName = HackathonDevcampUITests;
+			productReference = 4BDF2EB12B22D0DB00216CA8 /* HackathonDevcampUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BDF2E8F2B22D0D900216CA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					4BDF2E962B22D0D900216CA8 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					4BDF2EA62B22D0DB00216CA8 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 4BDF2E962B22D0D900216CA8;
+					};
+					4BDF2EB02B22D0DB00216CA8 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 4BDF2E962B22D0D900216CA8;
+					};
+				};
+			};
+			buildConfigurationList = 4BDF2E922B22D0D900216CA8 /* Build configuration list for PBXProject "HackathonDevcamp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4BDF2E8E2B22D0D900216CA8;
+			productRefGroup = 4BDF2E982B22D0D900216CA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BDF2E962B22D0D900216CA8 /* HackathonDevcamp */,
+				4BDF2EA62B22D0DB00216CA8 /* HackathonDevcampTests */,
+				4BDF2EB02B22D0DB00216CA8 /* HackathonDevcampUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BDF2E952B22D0D900216CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BDF2ED52B22D58500216CA8 /* OpenSauceOne-Regular.ttf in Resources */,
+				4BDF2EA22B22D0DB00216CA8 /* Preview Assets.xcassets in Resources */,
+				4BDF2ED12B22D57800216CA8 /* OpenSauceOne-Bold.ttf in Resources */,
+				4BDF2ED92B22D59500216CA8 /* OpenSauceOne-SemiBold.ttf in Resources */,
+				4BDF2E9F2B22D0DB00216CA8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BDF2EA52B22D0DB00216CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BDF2ED62B22D58500216CA8 /* OpenSauceOne-Regular.ttf in Resources */,
+				4BDF2ED22B22D57800216CA8 /* OpenSauceOne-Bold.ttf in Resources */,
+				4BDF2EDA2B22D59500216CA8 /* OpenSauceOne-SemiBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BDF2EAF2B22D0DB00216CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BDF2ED72B22D58500216CA8 /* OpenSauceOne-Regular.ttf in Resources */,
+				4BDF2ED32B22D57800216CA8 /* OpenSauceOne-Bold.ttf in Resources */,
+				4BDF2EDB2B22D59500216CA8 /* OpenSauceOne-SemiBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BDF2E932B22D0D900216CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BDF2EDE2B22E4D800216CA8 /* SplitBillView.swift in Sources */,
+				4BDF2EF02B23654400216CA8 /* UserModel.swift in Sources */,
+				4BDF2EC92B22D1BD00216CA8 /* CartView.swift in Sources */,
+				4BDF2E9D2B22D0DA00216CA8 /* ContentView.swift in Sources */,
+				4BDF2ECD2B22D30100216CA8 /* CheckoutView.swift in Sources */,
+				4BDF2EFC2B2365D200216CA8 /* PinInputView.swift in Sources */,
+				4BDF2EF42B23655600216CA8 /* GetUserData.swift in Sources */,
+				4BDF2EE22B22E52A00216CA8 /* ChoosePaymentView.swift in Sources */,
+				4BDF2F042B2375EA00216CA8 /* MenungguPembayaranView.swift in Sources */,
+				4BDF2EF82B23656500216CA8 /* ButtonComponent.swift in Sources */,
+				4BDF2F082B237A1E00216CA8 /* NotificationController.swift in Sources */,
+				4BDF2F062B23774F00216CA8 /* TransactionDetailView.swift in Sources */,
+				4BDF2F002B23698D00216CA8 /* AfterPaymentView.swift in Sources */,
+				4BDF2F0C2B23881600216CA8 /* ReviewPaymentView.swift in Sources */,
+				4BDF2E9B2B22D0DA00216CA8 /* HackathonDevcampApp.swift in Sources */,
+				4BDF2F0A2B237B1900216CA8 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BDF2EA32B22D0DB00216CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BDF2EDF2B22E4D800216CA8 /* SplitBillView.swift in Sources */,
+				4BDF2EF92B23656500216CA8 /* ButtonComponent.swift in Sources */,
+				4BDF2EF52B23655600216CA8 /* GetUserData.swift in Sources */,
+				4BDF2EE32B22E52A00216CA8 /* ChoosePaymentView.swift in Sources */,
+				4BDF2F012B23698D00216CA8 /* AfterPaymentView.swift in Sources */,
+				4BDF2EFD2B2365D200216CA8 /* PinInputView.swift in Sources */,
+				4BDF2EF12B23654400216CA8 /* UserModel.swift in Sources */,
+				4BDF2EAC2B22D0DB00216CA8 /* HackathonDevcampTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BDF2EAD2B22D0DB00216CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BDF2F022B23698D00216CA8 /* AfterPaymentView.swift in Sources */,
+				4BDF2EE42B22E52A00216CA8 /* ChoosePaymentView.swift in Sources */,
+				4BDF2EB62B22D0DB00216CA8 /* HackathonDevcampUITests.swift in Sources */,
+				4BDF2EE02B22E4D800216CA8 /* SplitBillView.swift in Sources */,
+				4BDF2EF22B23654400216CA8 /* UserModel.swift in Sources */,
+				4BDF2EFA2B23656500216CA8 /* ButtonComponent.swift in Sources */,
+				4BDF2EB82B22D0DB00216CA8 /* HackathonDevcampUITestsLaunchTests.swift in Sources */,
+				4BDF2EF62B23655600216CA8 /* GetUserData.swift in Sources */,
+				4BDF2EFE2B2365D200216CA8 /* PinInputView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BDF2EA92B22D0DB00216CA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BDF2E962B22D0D900216CA8 /* HackathonDevcamp */;
+			targetProxy = 4BDF2EA82B22D0DB00216CA8 /* PBXContainerItemProxy */;
+		};
+		4BDF2EB32B22D0DB00216CA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BDF2E962B22D0D900216CA8 /* HackathonDevcamp */;
+			targetProxy = 4BDF2EB22B22D0DB00216CA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4BDF2EB92B22D0DB00216CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4BDF2EBA2B22D0DB00216CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BDF2EBC2B22D0DB00216CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HackathonDevcamp/Preview Content\"";
+				DEVELOPMENT_TEAM = BJQUJR83ZY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HackathonDevcamp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.HackathonDevcamp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BDF2EBD2B22D0DB00216CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HackathonDevcamp/Preview Content\"";
+				DEVELOPMENT_TEAM = BJQUJR83ZY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HackathonDevcamp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.HackathonDevcamp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4BDF2EBF2B22D0DB00216CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJQUJR83ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.HackathonDevcampTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackathonDevcamp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HackathonDevcamp";
+			};
+			name = Debug;
+		};
+		4BDF2EC02B22D0DB00216CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJQUJR83ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.HackathonDevcampTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackathonDevcamp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HackathonDevcamp";
+			};
+			name = Release;
+		};
+		4BDF2EC22B22D0DB00216CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJQUJR83ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.HackathonDevcampUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HackathonDevcamp;
+			};
+			name = Debug;
+		};
+		4BDF2EC32B22D0DB00216CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJQUJR83ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.HackathonDevcampUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HackathonDevcamp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BDF2E922B22D0D900216CA8 /* Build configuration list for PBXProject "HackathonDevcamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BDF2EB92B22D0DB00216CA8 /* Debug */,
+				4BDF2EBA2B22D0DB00216CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BDF2EBB2B22D0DB00216CA8 /* Build configuration list for PBXNativeTarget "HackathonDevcamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BDF2EBC2B22D0DB00216CA8 /* Debug */,
+				4BDF2EBD2B22D0DB00216CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BDF2EBE2B22D0DB00216CA8 /* Build configuration list for PBXNativeTarget "HackathonDevcampTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BDF2EBF2B22D0DB00216CA8 /* Debug */,
+				4BDF2EC02B22D0DB00216CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BDF2EC12B22D0DB00216CA8 /* Build configuration list for PBXNativeTarget "HackathonDevcampUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BDF2EC22B22D0DB00216CA8 /* Debug */,
+				4BDF2EC32B22D0DB00216CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4BDF2E8F2B22D0D900216CA8 /* Project object */;
+}
